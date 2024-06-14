@@ -17,6 +17,8 @@ import BrandHomeOne from '@/components/brand/BrandHomeOne';
 import FooterOne from '@/layouts/footers/FooterOne';
 import Wrapper from '@/layouts/Wrapper';
 import LeftSideBar from '@/components/sticky/leftSticky/leftSticky'
+import BottomSticky from '@/components/sticky/bottomSticky/bottomSticky'
+
 
 export const metadata = {
   title: "Xyvin Tech",  
@@ -41,6 +43,7 @@ const index = () => {
         <BlogHomeOne />
         <SubscribeHomeOne />
         <BrandHomeOne style_2={false}  />
+        <BottomSticky/>
         <FooterOne />
       </div>
     </Wrapper>

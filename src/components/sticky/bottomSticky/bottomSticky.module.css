@@ -1,0 +1,41 @@
+/* social-icons.css */
+
+.circleMenu {
+  position: fixed;
+  bottom: 20px; /* Adjust the distance from the bottom */
+  right: 20px; /* Adjust the distance from the right */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.circleMenu li {
+  display: block;
+  margin-bottom: 10px; /* Adjust the space between icons */
+}
+
+.circleMenu a {
+  display: block;
+  width: 40px; /* Adjust the icon size */
+  height: 40px; /* Adjust the icon size */
+  background-color: #007bff; /* Adjust the background color */
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px; /* Adjust the icon size */
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.circleMenu a:hover {
+  background-color: #0056b3; /* Adjust hover background color */
+}
+
+.circleMenu .menuss-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.circleMenu svg {
+  fill: #fff; /* Adjust icon color */
+  width: 70%;
+  height: 70%;
+}
