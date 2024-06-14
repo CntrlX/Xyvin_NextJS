@@ -16,7 +16,7 @@ import SubscribeHomeOne from '@/components/subscribe/SubscribeHomeOne';
 import BrandHomeOne from '@/components/brand/BrandHomeOne';
 import FooterOne from '@/layouts/footers/FooterOne';
 import Wrapper from '@/layouts/Wrapper';
-
+import LeftSideBar from '@/components/sticky/leftSticky/leftSticky'
 
 export const metadata = {
   title: "Xyvin Tech",  
@@ -29,6 +29,7 @@ const index = () => {
       <HeaderOne />
       <div id="scrollsmoother-container">
         <HeroHomeOne />
+        <LeftSideBar/>
         <MarqueeAreaHomeOne />
         <AboutHomeOne />
         <ServiceHomeOne />

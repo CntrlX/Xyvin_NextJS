@@ -4,16 +4,13 @@
 import React from 'react'; 
 import Wrapper from '@/layouts/Wrapper'; 
 import Error from '@/components/error';
-
-// export const metadata = {
-//   title: "404 error || Vixan - Digital  Creative Agency Next js Template",
-// };
-
+import LeftSideBar from '@/components/sticky/leftSticky/leftSticky'
 
 const index = () => {
   return (
     <Wrapper> 
       <Error /> 
+      <LeftSideBar />
     </Wrapper>
   );
 };
