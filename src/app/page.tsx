@@ -16,6 +16,8 @@ import SubscribeHomeOne from '@/components/subscribe/SubscribeHomeOne';
 import BrandHomeOne from '@/components/brand/BrandHomeOne';
 import FooterOne from '@/layouts/footers/FooterOne';
 import Wrapper from '@/layouts/Wrapper';
+import LeftSideBar from '@/components/sticky/leftSticky/leftSticky'
+import BottomSticky from '@/components/sticky/bottomSticky/bottomSticky'
 
 
 export const metadata = {
@@ -29,6 +31,7 @@ const index = () => {
       <HeaderOne />
       <div id="scrollsmoother-container">
         <HeroHomeOne />
+        <LeftSideBar/>
         <MarqueeAreaHomeOne />
         <AboutHomeOne />
         <ServiceHomeOne />
@@ -40,6 +43,7 @@ const index = () => {
         <BlogHomeOne />
         <SubscribeHomeOne />
         <BrandHomeOne style_2={false}  />
+        <BottomSticky/>
         <FooterOne />
       </div>
     </Wrapper>
