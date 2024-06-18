@@ -20,21 +20,21 @@ const HeroCarousel: React.FC = () => {
         boxSizing: 'border-box', // Include padding in the total width/height
         borderRadius:'200px',
         minWidth:'398px',
-        background:'#ffgf',
-        marginTop:'300px',
+        background:'#fff',
+        marginTop:'180px',
       }}
     >
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 5000,
+          delay: 3000,
           disableOnInteraction: false,
         }}
         pagination={{
           clickable: true,
         }}
-        navigation={true}
+        navigation={false}
         modules={[Autoplay, Pagination, Navigation]}
         style={{ width: '100%', height: '100%' }}
       >
