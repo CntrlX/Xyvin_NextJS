@@ -1,10 +1,10 @@
 .carouselWrapper {
   margin-top: 200px; /* Adjust the top margin as needed to create a gap from the navbar or header */
-  min-height: 395px;
+  min-height: 700px;
 }
 
 .heroSwiper {
-  min-height: 395px;
+  min-height: 700px;
 }
 
 .slide {
@@ -19,10 +19,12 @@
 .slideContent {
   color: #fff;
   text-align: center;
+  padding: 20px;
+
 }
 
 .heroSwiper {
-  width: 50%;
+  min-width: 400px;
   height: 100vh;
   position: absolute;
 }

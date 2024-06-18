@@ -31,7 +31,7 @@ const index = () => {
     <Wrapper>      
       <HeaderOne />
       <div id="scrollsmoother-container">
-        <HeroHomeOne />
+        {/* <HeroHomeOne /> */}
         <HeroHomeSix/>
         <LeftSideBar/>
         <MarqueeAreaHomeOne />
