@@ -2790,21 +2790,19 @@ label {
 
 .dark .cs_site_header .cs_main_header .cs_main_header_in .cs_main_header_left .logo-dark {
     display: none;
-    position: fixed;
+
 }
 
 .dark .cs_site_header .cs_main_header .cs_main_header_in .cs_main_header_left .logo-white {
-    display: fixed;
+    display: relative;
 }
 
 .cs_site_header .cs_main_header .cs_main_header_in .cs_main_header_left .logo-white {
-    display: fixed;
-    position: fixed;
+    display: none;
 }
 
 .cs_site_header .cs_main_header .cs_main_header_in .cs_main_header_left .logo-dark {
-    display: fixed;
-    position: fixed;
+    display: none;
 }
 
 
