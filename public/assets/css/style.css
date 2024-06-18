@@ -2790,18 +2790,19 @@ label {
 
 .dark .cs_site_header .cs_main_header .cs_main_header_in .cs_main_header_left .logo-dark {
     display: none;
+    position: fixed;
 }
 
 .dark .cs_site_header .cs_main_header .cs_main_header_in .cs_main_header_left .logo-white {
-    display: block;
+    display: fixed;
 }
 
 .cs_site_header .cs_main_header .cs_main_header_in .cs_main_header_left .logo-white {
-    display: none;
+    display: fixed;
 }
 
 .cs_site_header .cs_main_header .cs_main_header_in .cs_main_header_left .logo-dark {
-    display: block;
+    display: fixed;
 }
 
 

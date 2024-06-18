@@ -19,6 +19,7 @@ import Wrapper from '@/layouts/Wrapper';
 import LeftSideBar from '@/components/sticky/leftSticky/leftSticky'
 import BottomSticky from '@/components/sticky/bottomSticky/bottomSticky'
 
+import HeroHomeSix from "@/components/hero/HeroHomeSix"
 
 export const metadata = {
   title: "Xyvin Tech",  
@@ -31,6 +32,7 @@ const index = () => {
       <HeaderOne />
       <div id="scrollsmoother-container">
         <HeroHomeOne />
+        <HeroHomeSix/>
         <LeftSideBar/>
         <MarqueeAreaHomeOne />
         <AboutHomeOne />
