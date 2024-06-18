@@ -2799,10 +2799,12 @@ label {
 
 .cs_site_header .cs_main_header .cs_main_header_in .cs_main_header_left .logo-white {
     display: fixed;
+    position: fixed;
 }
 
 .cs_site_header .cs_main_header .cs_main_header_in .cs_main_header_left .logo-dark {
     display: fixed;
+    position: fixed;
 }
 
 
