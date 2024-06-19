@@ -18,7 +18,7 @@ interface DataType {
 const footer_data: DataType = {
   email: `info@xyvin.com`,
   phone: `+91 6282 822 971`,
-  location: `3RD Floor, Highway Square, NH 66, Padivattom, Ernakulam, Kerala 682024`,
+  location: `dewSpace Business Center, Paramara Road, Near North Railway Station,Kochi,Kerala -682030.`,
   footer_info: `Welcome to our digital agency. We specialize in helping businesses like yours succeed online, from website design and development to digital marketing.`,
   links: [
     { title: `HOME`, link: "/" },
