@@ -1,141 +1,101 @@
-
 'use client'
 
 import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
-const achievements = [
-    {
-    image: 'https://cdn-kbkfn.nitrocdn.com/DvGadheEphxHjgXDPeUVvjVrIroOCLbz/assets/images/optimized/rev-39d86f2/webcastletech.com/wp-content/uploads/2021/07/6949a5af98af0a1c12e32935d58412db_3-2.png',
-    title: 'Top Web Design and Development Company',
-    details: 'WebCastle Technologies Ranked Top Web Design & Development Company in Dubai (UAE) by Clutch',
-  },
-   {
-    image: 'https://cdn-kbkfn.nitrocdn.com/DvGadheEphxHjgXDPeUVvjVrIroOCLbz/assets/images/optimized/rev-39d86f2/webcastletech.com/wp-content/uploads/2021/07/6949a5af98af0a1c12e32935d58412db_3-2.png',
-    title: 'Top Web Design and Development Company',
-    details: 'WebCastle Technologies Ranked Top Web Design & Development Company in Dubai (UAE) by Clutch',
-  },
-      {
-    image: 'https://cdn-kbkfn.nitrocdn.com/DvGadheEphxHjgXDPeUVvjVrIroOCLbz/assets/images/optimized/rev-39d86f2/webcastletech.com/wp-content/uploads/2021/07/6949a5af98af0a1c12e32935d58412db_3-2.png',
-    title: 'Top Web Design and Development Company',
-    details: 'WebCastle Technologies Ranked Top Web Design & Development Company in Dubai (UAE) by Clutch',
-  },
-   {
-    image: 'https://cdn-kbkfn.nitrocdn.com/DvGadheEphxHjgXDPeUVvjVrIroOCLbz/assets/images/optimized/rev-39d86f2/webcastletech.com/wp-content/uploads/2021/07/6949a5af98af0a1c12e32935d58412db_3-2.png',
-    title: 'Top Web Design and Development Company',
-    details: 'WebCastle Technologies Ranked Top Web Design & Development Company in Dubai (UAE) by Clutch',
-  },
-      {
-    image: 'https://cdn-kbkfn.nitrocdn.com/DvGadheEphxHjgXDPeUVvjVrIroOCLbz/assets/images/optimized/rev-39d86f2/webcastletech.com/wp-content/uploads/2021/07/6949a5af98af0a1c12e32935d58412db_3-2.png',
-    title: 'Top Web Design and Development Company',
-    details: 'WebCastle Technologies Ranked Top Web Design & Development Company in Dubai (UAE) by Clutch',
-  },
-   {
-    image: 'https://cdn-kbkfn.nitrocdn.com/DvGadheEphxHjgXDPeUVvjVrIroOCLbz/assets/images/optimized/rev-39d86f2/webcastletech.com/wp-content/uploads/2021/07/6949a5af98af0a1c12e32935d58412db_3-2.png',
-    title: 'Top Web Design and Development Company',
-    details: 'WebCastle Technologies Ranked Top Web Design & Development Company in Dubai (UAE) by Clutch',
-  },
-];
 
-const AchievementComponent: React.FC = () => {
+const HeroCarousel: React.FC = () => {
   return (
-    <div className="achievementContainer">
-      <h2>Achievements</h2>
-      <div className="achievementList">
-        {achievements.map((achievement, index) => (
-          <div key={index} className="achievementBox">
-            <div className="iconBox">
-              <img
-                src={achievement.image}
-                alt={`Image for ${achievement.title}`}
-                className="img-fluid achievement"
-              />
-            </div>
-            <div className="description text-center">
-              <h4 className="achievementCaption">{achievement.title}</h4>
-              <p className="textSmall fontLight">{achievement.details}</p>
-            </div>
-          </div>
-        ))}
-      </div>
+  <div
+      style={{
+        background: '#000',
+        padding: '50px 0',
+        textAlign: 'center',
+      }}
+    >
+      <h2 style={{ color: '#fff' }}>Achievements</h2>
 
-      <style jsx>{`
-        .achievementContainer {
-          background-color: #000;
-          padding: 50px 20px;
-          color: #fff;
-          text-align: center;
-          overflow: hidden; /* Hide overflowing content */
-        }
 
-        h2 {
-          margin-bottom: 40px;
-          font-size: 2em;
-          color: #fff;
-        }
-
-        .achievementList {
-          display: flex;
-          gap: 10px; /* Add gap between boxes */
-          overflow: hidden; /* Hide overflowing content */
-          animation: slideRight 30s linear infinite; /* Animation for sliding */
-        }
-
-        .achievementBox {
-          border: 1px solid #817b6f;
-          background-color: #1e1e1e;
-          color: #fff;
-          width: 300px;
-          padding: 20px;
-          box-sizing: border-box;
-          text-align: center;
-          position: relative;
-          border-radius: 10px;
-          transition: transform 0.5s ease; /* Smooth transition for hover effect */
-        }
-
-        .achievementBox:hover {
-          transform: scale(1.05); /* Scale up on hover */
-        }
-
-        .iconBox {
-          width: 100%;
-          overflow: hidden;
-          height: 100px;
-          margin-bottom: 20px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .iconBox img {
-          max-height: 100px;
-          max-width: 100px;
-        }
-
-        .description {
-          border-top: 1px solid #fff;
-          padding-top: 20px;
-          margin-top: 20px;
-        }
-
-        .achievementCaption {
-          margin: 0 0 10px 0;
-          font-size: 1.2em;
-        }
-
-        .textSmall {
-          margin: 0;
-          font-size: 1em;
-          font-weight: 300;
-        }
-
-        @keyframes slideRight {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(calc(-100% - 10px)); } /* Account for gap between boxes */
-        }
-      `}</style>
+  <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        minHeight: 'calc(60vh - 300px)', // Calculate height with a gap of 300px from all sides
+        padding: '0 100px', 
+        boxSizing: 'border-box', 
+        borderRadius:'200px',
+        minWidth:'398px',
+        background:'#3333',
+        marginTop:'100px',
+        marginBottom:'20px',
+      }}
+    >
+    
+      <Swiper
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={false}
+        modules={[Autoplay, Pagination, Navigation]}
+        style={{ width: '100%', height: '100%' }}
+      >
+      <SwiperSlide className="slide"  style={{
+            backgroundImage:
+              'url(/assets/img/award_1.svg)',
+            backgroundSize: 'cover', // Ensure the background image covers the entire slide
+            backgroundPosition: 'center', // Center the background image
+            minHeight: '300px', // Set the minimum height of the slide
+            borderRadius: '20px', // Border radius of 20px
+          }}
+        >
+        <div className="slideContent">
+          <h2>Slide 1 Title</h2>
+          <p>Slide 1 Description</p>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide className="slide"  style={{
+            backgroundImage:
+              'url(/assets/img/award_2.svg)',
+            backgroundSize: 'cover', 
+            backgroundPosition: 'center', 
+            minHeight: '300px', 
+            borderRadius: '20px',
+          }}
+         >
+        <div className="slideContent">
+          <h2>Slide 2 Title</h2>
+          <p>Slide 2 Description</p>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide className="slide"  style={{
+            backgroundImage:
+              'url(/assets/img/award_3.svg)',
+            backgroundSize: 'cover', 
+            backgroundPosition: 'center', 
+            minHeight: '300px',
+            borderRadius: '20px', 
+          }}
+        >
+        <div className="slideContent">
+          <h2>Slide 3 Title</h2>
+          <p>Slide 3 Description</p>
+        </div>
+      </SwiperSlide>
+    </Swiper>
+    </div>
     </div>
   );
 };
 
-export default AchievementComponent;
+export default HeroCarousel;

@@ -47,6 +47,7 @@ const index = () => {
         <SubscribeHomeOne />
         <BrandHomeOne style_2={false}  />
          <Achievements/>
+    
         <Service/>
         <Form/>
         <BottomSticky/>
