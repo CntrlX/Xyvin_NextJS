@@ -1,124 +1,111 @@
 'use client'
+
+
 import React from 'react';
-import { FaLaptopCode, FaDatabase, FaMobileAlt, FaCloud, FaServer, FaShieldAlt, FaProjectDiagram, FaPencilRuler, FaBug, FaTools, FaRocket, FaSyncAlt } from 'react-icons/fa';
+import { FaLaptopCode, FaMobileAlt, FaDatabase, FaCloud, FaLock, FaCogs, FaDesktop, FaNetworkWired, FaRobot, FaShoppingCart, FaSearch, FaChartLine } from 'react-icons/fa';
 
-interface Service {
-  icon: JSX.Element;
-  title: string;
-  description: string;
-}
-
-const services: Service[] = [
-  {
-    icon: <FaLaptopCode />,
-    title: 'Web Development',
-    description: 'Designing and developing responsive web applications.',
-  },
-  {
-    icon: <FaDatabase />,
-    title: 'Database Design',
-    description: 'Creating efficient and scalable database solutions.',
-  },
-  {
-    icon: <FaMobileAlt />,
-    title: 'Mobile App Development',
-    description: 'Building native and cross-platform mobile applications.',
-  },
-  {
-    icon: <FaCloud />,
-    title: 'Cloud Computing',
-    description: 'Deploying and managing applications in cloud environments.',
-  },
-  {
-    icon: <FaServer />,
-    title: 'Server Management',
-    description: 'Monitoring and maintaining server infrastructure.',
-  },
-  {
-    icon: <FaShieldAlt />,
-    title: 'Cybersecurity',
-    description: 'Securing digital assets and protecting against threats.',
-  },
-  // Add more services as needed
+const services = [
+  { icon: <FaLaptopCode />, title: "Web Development", description: "Custom web development services." },
+  { icon: <FaMobileAlt />, title: "Mobile Development", description: "Mobile app development for Android and iOS." },
+  { icon: <FaDatabase />, title: "Database Management", description: "Database design and management services." },
+  { icon: <FaCloud />, title: "Cloud Services", description: "Cloud computing and storage solutions." },
+  { icon: <FaLock />, title: "Cybersecurity", description: "Security assessments and solutions." },
+  { icon: <FaCogs />, title: "DevOps", description: "Continuous integration and delivery." },
+  { icon: <FaDesktop />, title: "UI/UX Design", description: "User interface and experience design." },
+  { icon: <FaNetworkWired />, title: "Network Management", description: "Network setup and maintenance." },
+  { icon: <FaRobot />, title: "AI Development", description: "Artificial intelligence and machine learning solutions." },
+  { icon: <FaShoppingCart />, title: "E-commerce", description: "Online store development and management." },
+  { icon: <FaSearch />, title: "SEO Services", description: "Search engine optimization services." },
+  { icon: <FaChartLine />, title: "Data Analytics", description: "Data analysis and business intelligence." },
 ];
 
 const Services: React.FC = () => {
   return (
     <div className="servicesContainer">
-      <h1>Our Services</h1>
-      <div className="servicesList">
+      <h2>Our Services</h2>
+      <div className="servicesGrid">
         {services.map((service, index) => (
-          <div key={index} className="serviceCard">
-            <div className="serviceIcon">{service.icon}</div>
-            <div className="serviceInfo">
-              <h2>{service.title}</h2>
-              <p>{service.description}</p>
-            </div>
+          <div className="col-md-6 col-lg-4 mb-60px" key={index}>
+            <a href="#">
+              <div className="service_box wow fadeInUp md-mb50" data-wow-delay=".25s">
+                <div className="service_icon line-border">{service.icon}</div>
+                <div className="service_info">
+                  <h4>{service.title}</h4>
+                  <p>{service.description}</p>
+                </div>
+              </div>
+            </a>
           </div>
         ))}
       </div>
 
       <style jsx>{`
         .servicesContainer {
-          text-align: center;
           padding: 20px;
-          background-color: #f0f4f8;
+          text-align: center;
+          background-color: #f5f5f5;
         }
 
-        .servicesList {
+        .servicesGrid {
           display: flex;
           flex-wrap: wrap;
-          gap: 20px;
           justify-content: center;
         }
 
-        .serviceCard {
-          display: flex;
-          align-items: center;
-          background-color: #1e3a8a;
-          color: #fff;
-          border-radius: 10px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          overflow: hidden;
-          max-width: 250px;
+        .col-md-6 {
           width: 100%;
-          transition: transform 0.3s, background-color 0.3s;
+          max-width: 50%;
+          box-sizing: border-box;
+          padding: 15px;
         }
 
-        .serviceCard:hover {
-          transform: translateY(-5px);
-          background-color: #1e40af;
+        .col-lg-4 {
+          width: 100%;
+          max-width: 33.33%;
+          box-sizing: border-box;
+          padding: 15px;
         }
 
-        .serviceIcon {
-          display: flex;
-          justify-content: center;
-          align-items: center;
+        .mb-60px {
+          margin-bottom: 60px;
+        }
+
+        .service_box {
+          background-color: #ADD8E6;
           padding: 20px;
-          font-size: 30px;
-          flex: 0.4;
+          border-radius: 20px;
+          color: #fff;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .serviceInfo {
-          padding: 20px;
-          flex: 0.6;
-          text-align: left;
+        .service_box:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
-        h1 {
+        .service_icon {
+          font-size: 40px;
           margin-bottom: 20px;
-          color: #1e3a8a;
         }
 
-        h2 {
-          margin-top: 10px;
+        .service_info h4 {
+          font-size: 20px;
           margin-bottom: 10px;
-          color: #fff;
         }
 
-        p {
-          color: #fff;
-          opacity: 0.8;
+        .service_info p {
+          font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+          .col-md-6 {
+            max-width: 100%;
+          }
+
+          .col-lg-4 {
+            max-width: 100%;
+          }
         }
       `}</style>
     </div>

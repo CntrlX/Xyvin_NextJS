@@ -19,6 +19,8 @@ import BottomSticky from '@/components/sticky/bottomSticky/bottomSticky'
 import HeroHomeSix from "@/components/hero/HeroHomeSix"
 import Service from "@/components/services/service"
 import Achievements from "@/components/achievements/achivement"
+import Form from "@/components/form/form"
+
 
 export const metadata = {
   title: "Xyvin Tech",  
@@ -46,6 +48,7 @@ const index = () => {
         <BrandHomeOne style_2={false}  />
          <Achievements/>
         <Service/>
+        <Form/>
         <BottomSticky/>
         <FooterOne />
       </div>
