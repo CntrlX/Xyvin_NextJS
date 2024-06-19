@@ -8,19 +8,19 @@ import { Swiper, SwiperSlide } from "swiper/react";
 const hero_slider = [
   {
     img: `/assets/img/hero_img_1.jpg`,
-    sub_title: "Creative Agency",
+    sub_title: "Software Agency",
     title: "We Nourish Your Business with Technology",
     des: `As your business supporting partner, we offer services from inception to deployment, including graphic design, development, marketing, and much more to nurture your business. So let's hike together to the peak of technology!`
   },
   {
     img: `/assets/img/hero_img_1.jpg`,
-    sub_title: "Creative Agency",
+    sub_title: "Software Agency",
     title: "We Nourish Your Business with Technology",
     des: `As your business supporting partner, we offer services from inception to deployment, including graphic design, development, marketing, and much more to nurture your business. So let's hike together to the peak of technology!`
   },
   {
     img: `/assets/img/hero_img_1.jpg`,
-    sub_title: "Creative Agency",
+    sub_title: "Software Agency",
     title: "We Nourish Your Business with Technology",
     des: `As your business supporting partner, we offer services from inception to deployment, including graphic design, development, marketing, and much more to nurture your business. So let's hike together to the peak of technology!`
   },

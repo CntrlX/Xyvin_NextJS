@@ -6,13 +6,13 @@ const StickyComponent = () => {
   
 return (
     <div className={styles.fixedSocilaicons}>
-      <a href="https://www.facebook.com/webcastlemedia" target="_blank">
+      <a href="https://www.facebook.com/" target="_blank">
         <i className="fab fa-facebook-f"></i>
       </a>
-      <a href="https://www.behance.net/WebCastle" target="_blank" className="lazyloaded">
+      <a href="https://www.behance.net/" target="_blank" className="lazyloaded">
         <i className="fab fa-behance"></i>
       </a>
-      <a href="https://www.linkedin.com/company/webcastle" target="_blank">
+      <a href="https://www.linkedin.com/company" target="_blank">
         <i className="fab fa-linkedin-in"></i>
       </a>
     </div>

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import HeaderOne from '@/layouts/headers/HeaderOne';
-import HeroHomeOne from '@/components/hero/HeroHomeOne';
+import HeroHomeFour from '@/components/hero/HeroHomeFour';
 import AboutHomeOne from '@/components/about/AboutHomeOne';
 import ServiceHomeOne from '@/components/service/ServiceHomeOne';
 import MarqueeAreaHomeOne from '@/components/brand/MarqueeAreaHomeOne';
@@ -31,8 +31,10 @@ const index = () => {
     <Wrapper>      
       <HeaderOne />
       <div id="scrollsmoother-container">
+
         {/* <HeroHomeOne /> */}
         <HeroHomeSix/>
+
         <LeftSideBar/>
         <MarqueeAreaHomeOne />
         <AboutHomeOne />
@@ -45,9 +47,9 @@ const index = () => {
         <BlogHomeOne />
         <SubscribeHomeOne />
         <BrandHomeOne style_2={false}  />
-        <BottomSticky/>
         <FooterOne />
       </div>
+        <BottomSticky/>
     </Wrapper>
   );
 };
