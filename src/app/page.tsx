@@ -18,7 +18,7 @@ import LeftSideBar from '@/components/sticky/leftSticky/leftSticky'
 import BottomSticky from '@/components/sticky/bottomSticky/bottomSticky'
 import HeroHomeSix from "@/components/hero/HeroHomeSix"
 import Service from "@/components/services/service"
-
+import Achievements from "@/components/achievements/achivement"
 
 export const metadata = {
   title: "Xyvin Tech",  
@@ -44,7 +44,7 @@ const index = () => {
         <BlogHomeOne />
         <SubscribeHomeOne />
         <BrandHomeOne style_2={false}  />
-
+         <Achievements/>
         <Service/>
         <BottomSticky/>
         <FooterOne />

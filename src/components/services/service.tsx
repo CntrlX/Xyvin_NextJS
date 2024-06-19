@@ -1,12 +1,45 @@
 'use client'
 import React from 'react';
-import { FaCode, FaLaptopCode, FaDatabase, FaMobileAlt, FaCloud, FaServer, FaShieldAlt, FaProjectDiagram, FaPencilRuler, FaBug, FaTools, FaRocket, FaSyncAlt, FaCogs, FaNetworkWired, FaSearch, FaPenNib, FaBusinessTime, FaLayerGroup, FaDesktop } from 'react-icons/fa';
+import { FaLaptopCode, FaDatabase, FaMobileAlt, FaCloud, FaServer, FaShieldAlt, FaProjectDiagram, FaPencilRuler, FaBug, FaTools, FaRocket, FaSyncAlt } from 'react-icons/fa';
 
-const services = [
-  "Web Development", "Mobile App Development", "Database Design", "API Development", "Cloud Computing",
-  "Server Management", "Cybersecurity", "Project Management", "UI/UX Design", "Bug Fixing",
-  "DevOps", "Performance Optimization", "Continuous Integration", "Automation", "Network Administration",
-  "SEO Optimization", "Technical Writing", "Consulting", "Full Stack Development", "Desktop Application Development"
+interface Service {
+  icon: JSX.Element;
+  title: string;
+  description: string;
+}
+
+const services: Service[] = [
+  {
+    icon: <FaLaptopCode />,
+    title: 'Web Development',
+    description: 'Designing and developing responsive web applications.',
+  },
+  {
+    icon: <FaDatabase />,
+    title: 'Database Design',
+    description: 'Creating efficient and scalable database solutions.',
+  },
+  {
+    icon: <FaMobileAlt />,
+    title: 'Mobile App Development',
+    description: 'Building native and cross-platform mobile applications.',
+  },
+  {
+    icon: <FaCloud />,
+    title: 'Cloud Computing',
+    description: 'Deploying and managing applications in cloud environments.',
+  },
+  {
+    icon: <FaServer />,
+    title: 'Server Management',
+    description: 'Monitoring and maintaining server infrastructure.',
+  },
+  {
+    icon: <FaShieldAlt />,
+    title: 'Cybersecurity',
+    description: 'Securing digital assets and protecting against threats.',
+  },
+  // Add more services as needed
 ];
 
 const Services: React.FC = () => {
@@ -14,22 +47,15 @@ const Services: React.FC = () => {
     <div className="servicesContainer">
       <h1>Our Services</h1>
       <div className="servicesList">
-        <div className="servicesColumn">
-          {services.slice(0, 10).map((service, index) => (
-            <div key={index} className="serviceItem">
-              <ServiceIcon index={index} />
-              <span>{service}</span>
+        {services.map((service, index) => (
+          <div key={index} className="serviceCard">
+            <div className="serviceIcon">{service.icon}</div>
+            <div className="serviceInfo">
+              <h2>{service.title}</h2>
+              <p>{service.description}</p>
             </div>
-          ))}
-        </div>
-        <div className="servicesColumn">
-          {services.slice(10).map((service, index) => (
-            <div key={index} className="serviceItem">
-              <ServiceIcon index={index + 10} />
-              <span>{service}</span>
-            </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
 
       <style jsx>{`
@@ -41,57 +67,62 @@ const Services: React.FC = () => {
 
         .servicesList {
           display: flex;
-          justify-content: center;
           flex-wrap: wrap;
-          gap:30px;
+          gap: 20px;
+          justify-content: center;
         }
 
-        .servicesColumn {
-          flex: 1;
-          min-width: 200px;
-        }
-
-        .serviceItem {
+        .serviceCard {
           display: flex;
           align-items: center;
-          margin: 10px 0;
-          padding: 10px 20px;
           background-color: #1e3a8a;
-          border-radius: 20px;
           color: #fff;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+          max-width: 250px;
+          width: 100%;
           transition: transform 0.3s, background-color 0.3s;
         }
 
-        .serviceItem:hover {
+        .serviceCard:hover {
           transform: translateY(-5px);
           background-color: #1e40af;
         }
 
-        .icon {
-          width: 30px;
-          height: 30px;
-          margin-right: 10px;
-          gap:20px;
+        .serviceIcon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 20px;
+          font-size: 30px;
+          flex: 0.4;
+        }
+
+        .serviceInfo {
+          padding: 20px;
+          flex: 0.6;
+          text-align: left;
         }
 
         h1 {
           margin-bottom: 20px;
           color: #1e3a8a;
         }
+
+        h2 {
+          margin-top: 10px;
+          margin-bottom: 10px;
+          color: #fff;
+        }
+
+        p {
+          color: #fff;
+          opacity: 0.8;
+        }
       `}</style>
     </div>
   );
-};
-
-const ServiceIcon: React.FC<{ index: number }> = ({ index }) => {
-  const icons = [
-    FaCode, FaMobileAlt, FaDatabase, FaLaptopCode, FaCloud,
-    FaServer, FaShieldAlt, FaProjectDiagram, FaPencilRuler, FaBug,
-    FaTools, FaRocket, FaSyncAlt, FaCogs, FaNetworkWired,
-    FaSearch, FaPenNib, FaBusinessTime, FaLayerGroup, FaDesktop
-  ];
-  const IconComponent = icons[index];
-  return <IconComponent className="icon" />;
 };
 
 export default Services;
