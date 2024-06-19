@@ -16,8 +16,8 @@ const HeroCarousel: React.FC = () => {
         justifyContent: 'center',
         alignItems: 'center',
         minHeight: 'calc(60vh - 300px)', // Calculate height with a gap of 300px from all sides
-        padding: '0 100px', // Add padding of 300px from all sides
-        boxSizing: 'border-box', // Include padding in the total width/height
+        padding: '0 100px', 
+        boxSizing: 'border-box', 
         borderRadius:'200px',
         minWidth:'398px',
         background:'#fff',
@@ -55,10 +55,10 @@ const HeroCarousel: React.FC = () => {
       <SwiperSlide className="slide"  style={{
             backgroundImage:
               'url(https://plus.unsplash.com/premium_photo-1677653128215-43b4e3732d17?q=80&w=1382&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
-            backgroundSize: 'cover', // Ensure the background image covers the entire slide
-            backgroundPosition: 'center', // Center the background image
-            minHeight: '300px', // Set the minimum height of the slide
-            borderRadius: '20px', // Border radius of 20px
+            backgroundSize: 'cover', 
+            backgroundPosition: 'center', 
+            minHeight: '300px', 
+            borderRadius: '20px',
           }}
          >
         <div className="slideContent">
@@ -69,10 +69,10 @@ const HeroCarousel: React.FC = () => {
       <SwiperSlide className="slide"  style={{
             backgroundImage:
               'url(https://plus.unsplash.com/premium_photo-1677653128215-43b4e3732d17?q=80&w=1382&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
-            backgroundSize: 'cover', // Ensure the background image covers the entire slide
-            backgroundPosition: 'center', // Center the background image
-            minHeight: '300px', // Set the minimum height of the slide
-            borderRadius: '20px', // Border radius of 20px
+            backgroundSize: 'cover', 
+            backgroundPosition: 'center', 
+            minHeight: '300px',
+            borderRadius: '20px', 
           }}
         >
         <div className="slideContent">
