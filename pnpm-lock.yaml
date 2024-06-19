@@ -51,7 +51,7 @@ importers:
         specifier: ^1.70.0
         version: 1.77.5
       swiper:
-        specifier: ^11.0.5
+        specifier: ^11.1.4
         version: 11.1.4
     devDependencies:
       '@types/node':

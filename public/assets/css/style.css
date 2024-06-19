@@ -2790,10 +2790,11 @@ label {
 
 .dark .cs_site_header .cs_main_header .cs_main_header_in .cs_main_header_left .logo-dark {
     display: none;
+
 }
 
 .dark .cs_site_header .cs_main_header .cs_main_header_in .cs_main_header_left .logo-white {
-    display: block;
+    display: relative;
 }
 
 .cs_site_header .cs_main_header .cs_main_header_in .cs_main_header_left .logo-white {
@@ -2801,7 +2802,7 @@ label {
 }
 
 .cs_site_header .cs_main_header .cs_main_header_in .cs_main_header_left .logo-dark {
-    display: block;
+    display: none;
 }
 
 
