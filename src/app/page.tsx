@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import HeaderOne from '@/layouts/headers/HeaderOne';
 import HeroHomeFour from '@/components/hero/HeroHomeFour';
@@ -18,8 +16,11 @@ import FooterOne from '@/layouts/footers/FooterOne';
 import Wrapper from '@/layouts/Wrapper';
 import LeftSideBar from '@/components/sticky/leftSticky/leftSticky'
 import BottomSticky from '@/components/sticky/bottomSticky/bottomSticky'
-
 import HeroHomeSix from "@/components/hero/HeroHomeSix"
+import Service from "@/components/services/service"
+import Achievements from "@/components/achievements/achivement"
+import Form from "@/components/form/form"
+
 
 export const metadata = {
   title: "Xyvin Tech",  
@@ -47,6 +48,13 @@ const index = () => {
         <BlogHomeOne />
         <SubscribeHomeOne />
         <BrandHomeOne style_2={false}  />
+
+         <Achievements/>
+    
+        <Service/>
+        <Form/>
+        <BottomSticky/>
+
         <FooterOne />
       </div>
         <BottomSticky/>
