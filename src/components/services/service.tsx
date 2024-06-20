@@ -37,7 +37,7 @@ const ServiceComponent: React.FC = () => {
       <style jsx>{`
         .serviceMainContainer {
           background-color: #000;
-          padding: 50px 20px;
+          padding: 115px 20px 120px 20px;
           text-align: center;
         }
 
@@ -45,13 +45,15 @@ const ServiceComponent: React.FC = () => {
           color: #fff;
           margin-bottom: 30px;
           font-size: 1.5em;
+          text-align: center;
+          padding:  20px;
         }
 
         .serviceContainer {
           display: flex;
           flex-wrap: wrap;
           justify-content: center;
-          gap: 20px;
+          gap: 50px;
         }
 
         .serviceBox {

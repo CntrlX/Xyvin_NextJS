@@ -39,7 +39,8 @@ const index = () => {
         <LeftSideBar/>
         <MarqueeAreaHomeOne />
         <AboutHomeOne />
-        <ServiceHomeOne />
+         <Service/>
+        {/* <ServiceHomeOne /> */}
         <PortfolioHomeOne />
         <AwardsHomeOne />
         <Testimonial />
@@ -48,10 +49,7 @@ const index = () => {
         <BlogHomeOne />
         <SubscribeHomeOne />
         <BrandHomeOne style_2={false}  />
-
          <Achievements/>
-    
-        <Service/>
         <Form/>
         <BottomSticky/>
 
