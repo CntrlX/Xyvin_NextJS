@@ -1,6 +1,6 @@
 .fixedSocilaicons {
     position: fixed;
-    mix-blend-mode: difference;
+    mix-blend-mode: exclusion;
     color: #fff;
     background: #000;
     width: 30px;
@@ -11,4 +11,11 @@
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     z-index: 999;
+}
+
+@media (max-width: 1200px) {
+    .fixedSocilaicons {
+        display: block;
+        width: 10px;
+    }
 }

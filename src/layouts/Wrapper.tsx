@@ -9,7 +9,7 @@ const Wrapper = ({ children }: any) => {
 
   return (
     <>
-      <ScrollToTop />
+      <ScrollToTop /> 
       {/* <DarkLight /> */}
       {children}
     </>
