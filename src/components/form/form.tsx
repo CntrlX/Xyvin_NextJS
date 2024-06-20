@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import ReCAPTCHA from 'react-google-recaptcha';
+
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -54,10 +54,7 @@ const ContactForm: React.FC = () => {
             <label htmlFor="message">Message:</label>
             <textarea id="message" name="message" value={formData.message} onChange={handleChange} required />
           </div>
-          <div className="recaptcha">
-            {/* Replace 'your-site-key' with your actual reCAPTCHA site key */}
-            <ReCAPTCHA sitekey="your-site-key" />
-          </div>
+      
           <button type="submit" className="submitButton">Submit</button>
         </form>
       </div>
