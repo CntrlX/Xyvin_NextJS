@@ -36,15 +36,16 @@ const ServiceComponent: React.FC = () => {
 
       <style jsx>{`
         .serviceMainContainer {
-          background-color: #000;
-          padding: 115px 20px 120px 20px;
+          background-color: #01112F;;
+          padding: 140px 20px 180px 20px;
           text-align: center;
         }
 
         h2 {
           color: #fff;
           margin-bottom: 30px;
-          font-size: 1.5em;
+          font-size: 55px;
+          font-weight: 500;
           text-align: center;
           padding:  20px;
         }

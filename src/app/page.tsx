@@ -38,7 +38,7 @@ const index = () => {
 
         <LeftSideBar/>
         <MarqueeAreaHomeOne />
-        <AboutHomeOne />
+        {/* <AboutHomeOne /> */}
          <Service/>
         {/* <ServiceHomeOne /> */}
         <PortfolioHomeOne />
