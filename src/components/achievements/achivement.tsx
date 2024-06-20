@@ -12,26 +12,35 @@ const HeroCarousel: React.FC = () => {
   return (
   <div
       style={{
+        background: '#000',
+        padding: '50px 0',
+        textAlign: 'center',
+      }}
+    >
+      <h2 style={{ color: '#fff' }}>Achievements</h2>
+
+
+  <div
+      style={{
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-
-        minHeight: 'calc(60vh - 500px)', // Calculate height with a gap of 300px from all sides
-        padding: '0 120px', // Add padding of 300px from all sides
-        boxSizing: 'border-box', // Include padding in the total width/height
-
+        minHeight: 'calc(60vh - 300px)', // Calculate height with a gap of 300px from all sides
+        padding: '0 100px', 
+        boxSizing: 'border-box', 
         borderRadius:'200px',
         minWidth:'398px',
-        background:'#fff',
-        marginTop:'180px',
+        background:'#3333',
+        marginTop:'100px',
+        marginBottom:'20px',
       }}
     >
+    
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
-        loop={true}
         autoplay={{
-          delay: 50000,
+          delay: 3000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -43,10 +52,10 @@ const HeroCarousel: React.FC = () => {
       >
       <SwiperSlide className="slide"  style={{
             backgroundImage:
-              'url(https://plus.unsplash.com/premium_photo-1677653128215-43b4e3732d17?q=80&w=1382&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
+              'url(/assets/img/award_1.svg)',
             backgroundSize: 'cover', // Ensure the background image covers the entire slide
             backgroundPosition: 'center', // Center the background image
-            minHeight: '350px', // Set the minimum height of the slide
+            minHeight: '300px', // Set the minimum height of the slide
             borderRadius: '20px', // Border radius of 20px
           }}
         >
@@ -57,13 +66,11 @@ const HeroCarousel: React.FC = () => {
       </SwiperSlide>
       <SwiperSlide className="slide"  style={{
             backgroundImage:
-              'url(https://plus.unsplash.com/premium_photo-1677653128215-43b4e3732d17?q=80&w=1382&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
-
-            backgroundSize: 'cover', // Ensure the background image covers the entire slide
-            backgroundPosition: 'center', // Center the background image
-            minHeight: '350px', // Set the minimum height of the slide
-            borderRadius: '20px', // Border radius of 20px
-
+              'url(/assets/img/award_2.svg)',
+            backgroundSize: 'cover', 
+            backgroundPosition: 'center', 
+            minHeight: '300px', 
+            borderRadius: '20px',
           }}
          >
         <div className="slideContent">
@@ -73,13 +80,11 @@ const HeroCarousel: React.FC = () => {
       </SwiperSlide>
       <SwiperSlide className="slide"  style={{
             backgroundImage:
-              'url(https://plus.unsplash.com/premium_photo-1677653128215-43b4e3732d17?q=80&w=1382&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
-
-            backgroundSize: 'cover', // Ensure the background image covers the entire slide
-            backgroundPosition: 'center', // Center the background image
-            minHeight: '350px', // Set the minimum height of the slide
-            borderRadius: '20px', // Border radius of 20px
-
+              'url(/assets/img/award_3.svg)',
+            backgroundSize: 'cover', 
+            backgroundPosition: 'center', 
+            minHeight: '300px',
+            borderRadius: '20px', 
           }}
         >
         <div className="slideContent">
@@ -88,6 +93,7 @@ const HeroCarousel: React.FC = () => {
         </div>
       </SwiperSlide>
     </Swiper>
+    </div>
     </div>
   );
 };

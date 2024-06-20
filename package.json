@@ -18,9 +18,12 @@
     "react-18-image-lightbox": "^5.1.4",
     "react-countup": "^6.5.0",
     "react-dom": "^18",
+    "react-google-recaptcha": "^3.1.0",
+    "react-icons": "^5.2.1",
     "react-intersection-observer": "^9.7.0",
     "react-modal-image": "^2.6.0",
     "react-modal-video": "^2.0.1",
+    "react-slick": "^0.30.2",
     "react-use": "^17.5.0",
     "sass": "^1.70.0",
     "swiper": "^11.1.4"
@@ -29,6 +32,7 @@
     "@types/node": "^20.11.17",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-slick": "^0.23.13",
     "typescript": "^5"
   }
 }
