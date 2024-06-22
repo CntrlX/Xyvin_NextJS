@@ -8,9 +8,9 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 // Import images from local folder
-import image1 from '/assets/img/carousel_img/image1.jpg';
-import image2 from '/assets/img/carousel_img/image2.jpg';
-import image3 from '/assets/img/carousel_img/image3.jpg';
+import Image1 from '/assets/img/carousel_img/image1.jpg';
+import Image2 from '/assets/img/carousel_img/image2.jpg';
+import Image3 from '/assets/img/carousel_img/image3.jpg';
 
 const HeroCarousel: React.FC = () => {
   return (
@@ -45,14 +45,14 @@ const HeroCarousel: React.FC = () => {
         <SwiperSlide
           className="slide"
           style={{
-            backgroundImage: `url(${image1})`,
-            backgroundSize: 'cover', // Ensure the background image covers the entire slide
-            backgroundPosition: 'center', // Center the background image
-            minHeight: '300px', // Set the minimum height of the slide
-            borderRadius: '20px', // Border radius of 20px
-            display: 'flex', // Center content
-            justifyContent: 'center', // Center content
-            alignItems: 'center', // Center content
+            backgroundImage: `url(${Image1})`,
+            backgroundSize: 'cover', 
+            backgroundPosition: 'center', 
+            minHeight: '300px', 
+            borderRadius: '20px',
+            display: 'flex',
+            justifyContent: 'center', 
+            alignItems: 'center', 
           }}
         >
           <div className="slideContent" style={{ textAlign: 'center' }}>
@@ -66,7 +66,7 @@ const HeroCarousel: React.FC = () => {
         <SwiperSlide
           className="slide"
           style={{
-            backgroundImage: `url(${image2})`,
+            backgroundImage: `url(${Image2})`,
             backgroundSize: 'cover', 
             backgroundPosition: 'center', 
             minHeight: '300px', 
@@ -87,7 +87,7 @@ const HeroCarousel: React.FC = () => {
         <SwiperSlide
           className="slide"
           style={{
-            backgroundImage: `url(${image3})`,
+            backgroundImage: `url(${Image3})`,
             backgroundSize: 'cover', 
             backgroundPosition: 'center', 
             minHeight: '300px', 
