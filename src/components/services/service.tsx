@@ -1,21 +1,16 @@
 'use client'
 
 import React from 'react';
-import { FaCode, FaMobileAlt, FaDatabase, FaCloud, FaLock, FaChartLine, FaBullhorn, FaSearch, FaShoppingCart, FaUsers, FaTools, FaEnvelope } from 'react-icons/fa';
+import { FaCode, FaUsers , FaMobileAlt,FaLaptopCode , FaChartLine,FaSearch, FaShoppingCart,FaTools } from 'react-icons/fa';
 
 const services = [
-  { icon: <FaCode />, title: "Web Development", description: "Creating responsive and dynamic websites." },
-  { icon: <FaMobileAlt />, title: "Mobile Development", description: "Developing mobile applications for Android and iOS." },
-  { icon: <FaDatabase />, title: "Database Management", description: "Designing and managing database systems." },
-  { icon: <FaCloud />, title: "Cloud Services", description: "Offering scalable cloud solutions." },
-  { icon: <FaLock />, title: "Cybersecurity", description: "Ensuring the security of digital assets." },
-  { icon: <FaChartLine />, title: "Data Analytics", description: "Providing data insights and analytics." },
-  { icon: <FaBullhorn />, title: "Digital Marketing", description: "Promoting brands through digital channels." },
-  { icon: <FaSearch />, title: "SEO Services", description: "Improving website visibility on search engines." },
-  { icon: <FaShoppingCart />, title: "E-commerce Solutions", description: "Developing online shopping platforms." },
-  { icon: <FaUsers />, title: "Social Media Management", description: "Managing social media profiles and content." },
-  { icon: <FaTools />, title: "IT Support", description: "Providing technical support and solutions." },
-  { icon: <FaEnvelope />, title: "Email Marketing", description: "Creating and managing email marketing campaigns." },
+  { icon: <FaMobileAlt />, title: "iOS & Android App Solutions", description: "seamless experiences on Apple and Android devices." },
+  { icon: <FaShoppingCart />, title: "Ecommerce Solutions", description: "Sales boosting ecommerce development services." },
+  { icon: <FaSearch />, title: "Search Engine Optimisation", description: "Experienced SEO services providing team." },
+  { icon: <FaCode />, title: "Web Development", description: "User centered web development services." },
+  { icon: <FaLaptopCode  />, title: "ERP Development", description: "Strategic ERP development services." },
+  { icon: <FaUsers  />, title: "CRM", description: "CRM services designed to elevate your customer relationships and drive business growth." },
+  { icon: <FaTools />, title: "API Integration Services", description: "Top-notch API integration service." },
 ];
 
 const ServiceComponent: React.FC = () => {

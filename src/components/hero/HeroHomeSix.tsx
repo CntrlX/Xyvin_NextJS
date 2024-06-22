@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -7,31 +7,32 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
+// Import images from local folder
+import Image1 from '@/assets/img/carousel_img/image1.jpg';
+import Image2 from '@/assets/img/carousel_img/image2.jpg';
+import Image3 from '@/assets/img/carousel_img/image3.jpg';
 
 const HeroCarousel: React.FC = () => {
   return (
-  <div
+    <div
       style={{
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-
-        minHeight: 'calc(60vh - 500px)', // Calculate height with a gap of 300px from all sides
-        padding: '0 120px', // Add padding of 300px from all sides
-        boxSizing: 'border-box', // Include padding in the total width/height
-
-        borderRadius:'200px',
-        minWidth:'398px',
-        background:'#fff',
-        marginTop:'180px',
+        minHeight: 'calc(60vh - 300px)', // Calculate height with a gap of 300px from all sides
+        padding: '0 100px', 
+        boxSizing: 'border-box', 
+        borderRadius: '200px',
+        minWidth: '398px',
+        background: '#fff',
+        marginTop: '180px',
       }}
     >
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
-        loop={true}
         autoplay={{
-          delay: 50000,
+          delay: 3000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -41,53 +42,70 @@ const HeroCarousel: React.FC = () => {
         modules={[Autoplay, Pagination, Navigation]}
         style={{ width: '100%', height: '100%' }}
       >
-      <SwiperSlide className="slide"  style={{
-            backgroundImage:
-              'url(https://plus.unsplash.com/premium_photo-1677653128215-43b4e3732d17?q=80&w=1382&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
-            backgroundSize: 'cover', // Ensure the background image covers the entire slide
-            backgroundPosition: 'center', // Center the background image
-            minHeight: '350px', // Set the minimum height of the slide
-            borderRadius: '20px', // Border radius of 20px
+        <SwiperSlide
+          className="slide"
+          style={{
+            backgroundImage: `url(${Image1})`,
+            backgroundSize: 'cover', 
+            backgroundPosition: 'center', 
+            minHeight: '300px', 
+            borderRadius: '20px',
+            display: 'flex',
+            justifyContent: 'center', 
+            alignItems: 'center', 
           }}
         >
-        <div className="slideContent">
-          <h2>Slide 1 Title</h2>
-          <p>Slide 1 Description</p>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide className="slide"  style={{
-            backgroundImage:
-              'url(https://plus.unsplash.com/premium_photo-1677653128215-43b4e3732d17?q=80&w=1382&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
-
-            backgroundSize: 'cover', // Ensure the background image covers the entire slide
-            backgroundPosition: 'center', // Center the background image
-            minHeight: '350px', // Set the minimum height of the slide
-            borderRadius: '20px', // Border radius of 20px
-
-          }}
-         >
-        <div className="slideContent">
-          <h2>Slide 2 Title</h2>
-          <p>Slide 2 Description</p>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide className="slide"  style={{
-            backgroundImage:
-              'url(https://plus.unsplash.com/premium_photo-1677653128215-43b4e3732d17?q=80&w=1382&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
-
-            backgroundSize: 'cover', // Ensure the background image covers the entire slide
-            backgroundPosition: 'center', // Center the background image
-            minHeight: '350px', // Set the minimum height of the slide
-            borderRadius: '20px', // Border radius of 20px
-
+          <div className="slideContent" style={{ textAlign: 'center' }}>
+            <h2 style={{ fontSize: '2em', margin: '10px 0' }}>Innovate, create, and elevate.</h2>
+            <p style={{ fontSize: '1em', margin: '10px 0' }}>
+              Unleash your potential with our mantra: Innovate, create, and elevate. Transform
+              your ideas into reality and reach new heights with us!
+            </p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide
+          className="slide"
+          style={{
+            backgroundImage: `url(${Image2})`,
+            backgroundSize: 'cover', 
+            backgroundPosition: 'center', 
+            minHeight: '300px', 
+            borderRadius: '20px',
+            display: 'flex', 
+            justifyContent: 'center', 
+            alignItems: 'center', 
           }}
         >
-        <div className="slideContent">
-          <h2>Slide 3 Title</h2>
-          <p>Slide 3 Description</p>
-        </div>
-      </SwiperSlide>
-    </Swiper>
+          <div className="slideContent" style={{ textAlign: 'center' }}>
+            <h2 style={{ fontSize: '2em', margin: '10px 0' }}>Empowering innovation through visionary solutions</h2>
+            <p style={{ fontSize: '1em', margin: '10px 0' }}>
+              Our goal is to offer businesses groundbreaking technological solutions that
+              enhance productivity and foster growth.
+            </p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide
+          className="slide"
+          style={{
+            backgroundImage: `url(${Image3})`,
+            backgroundSize: 'cover', 
+            backgroundPosition: 'center', 
+            minHeight: '300px', 
+            borderRadius: '20px', 
+            display: 'flex', 
+            justifyContent: 'center', 
+            alignItems: 'center', 
+          }}
+        >
+          <div className="slideContent" style={{ textAlign: 'center' }}>
+            <h2 style={{ fontSize: '2em', margin: '10px 0' }}>Top-notch SEO services and growth excellence</h2>
+            <p style={{ fontSize: '1em', margin: '10px 0' }}>
+              Our commitment is to devise effective strategies and foster business growth
+              through data-driven insights and precise targeting.
+            </p>
+          </div>
+        </SwiperSlide>
+      </Swiper>
     </div>
   );
 };
