@@ -25,27 +25,29 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ question, answer }) => {
 
       <style jsx>{`
         .accordionItem {
-          border-bottom: 1px solid #ddd;
+          border-bottom: 2px solid #ddd;
           transition: background-color 0.3s ease, box-shadow 0.3s ease;
           cursor: pointer;
           margin-bottom: 10px;
           padding: 10px;
           border-radius: 5px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         .accordionItem:hover {
           background-color: #f0f0f0;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
         }
         .question {
           padding: 15px;
           background-color: #f7f7f7;
           font-weight: bold;
           border-radius: 5px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         .answer {
           max-height: 0;
           overflow: hidden;
-          transition: max-height 0.3s ease;
+          transition: max-height 0.3s ease, padding 0.3s ease;
           padding: 0 15px;
           background-color: #fff;
           border-radius: 0 0 5px 5px;
@@ -53,7 +55,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ question, answer }) => {
         .answer.open {
           max-height: 200px; /* Adjust this value based on content length */
           padding: 15px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
         }
       `}</style>
     </div>
@@ -83,16 +85,23 @@ const Accordion: React.FC<AccordionProps> = ({ data }) => {
           font-size: 2.5em;
           margin-bottom: 20px;
           padding: 10px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
           display: inline-block;
+          border-radius: 5px;
+          transition:0.5 ;
         }
+          .heading:hover{
+          box-shadow: 0 4px 8px rgba(0, 0, 0.5, 0.25);
+          transform: scale(1.1)
+
+          }
         .accordion {
           border: 1px solid #ddd;
           border-radius: 5px;
           width: 100%;
           max-width: 600px;
           margin: 0 auto;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
         }
       `}</style>
     </div>

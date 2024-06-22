@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 
-
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -71,7 +70,7 @@ const ContactForm: React.FC = () => {
           background-color: #333;
           color: #fff;
           padding: 50px;
-          max-width: 750px;
+          max-width: 860px;
           border-radius: 20px;
         }
 
@@ -94,7 +93,7 @@ const ContactForm: React.FC = () => {
         input,
         textarea {
           width: 100%;
-          padding: 2px;
+          padding: 10px;
           border-radius: 0;
           border: none;
           border-bottom: 2px solid #ccc; /* Thin line style */
@@ -105,7 +104,7 @@ const ContactForm: React.FC = () => {
         input:focus,
         textarea:focus {
           outline: none;
-          border-color: #1e3a8a; /* Change border color on focus */
+          border-color: #FEA3AC; /* Change border color on focus */
         }
 
         textarea {
@@ -113,23 +112,20 @@ const ContactForm: React.FC = () => {
           min-height: 50px; /* Set a minimum height for textarea */
         }
 
-        .recaptcha {
-          margin-bottom: 20px;
-          transform: scale(0.85); /* Scale down the reCAPTCHA widget */
-          transform-origin: 0 0; /* Adjust the transform origin */
-        }
-
         .submitButton {
           border: none;
           background-color: transparent;
+          font-size: 1.5rem;
           color: #fff;
           cursor: pointer;
           text-decoration: underline;
           margin-left: -4px; /* Adjust margin to align with form fields */
+          transition: color 0.5s ease, opacity 0.5s ease; /* Add smooth and soft transition */
         }
 
         .submitButton:hover {
-          color: #1e3a8a;
+          color: #8BF7B7;
+          opacity: 0.7; /* Reduce opacity on hover */
         }
 
         p {
@@ -138,6 +134,21 @@ const ContactForm: React.FC = () => {
 
         h2 {
           color: #fff;
+        }
+
+        @media (max-width: 600px) {
+          .contactFormContainer {
+            padding: 20px;
+          }
+
+          input,
+          textarea {
+            padding: 5px;
+          }
+
+          .submitButton {
+            font-size: 1.2rem;
+          }
         }
       `}</style>
     </div>
