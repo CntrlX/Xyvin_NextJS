@@ -1,15 +1,15 @@
 'use client'
 
 import React from 'react';
-import { FaCode, FaMobileAlt,FaLock, FaChartLine,FaSearch, FaShoppingCart,FaTools } from 'react-icons/fa';
+import { FaCode, FaUsers , FaMobileAlt,FaLaptopCode , FaChartLine,FaSearch, FaShoppingCart,FaTools } from 'react-icons/fa';
 
 const services = [
   { icon: <FaMobileAlt />, title: "iOS & Android App Solutions", description: "seamless experiences on Apple and Android devices." },
   { icon: <FaShoppingCart />, title: "Ecommerce Solutions", description: "Sales boosting ecommerce development services." },
   { icon: <FaSearch />, title: "Search Engine Optimisation", description: "Experienced SEO services providing team." },
   { icon: <FaCode />, title: "Web Development", description: "User centered web development services." },
-  { icon: <FaLock />, title: "ERP Development", description: "Strategic ERP development services." },
-  { icon: <FaChartLine />, title: "CRM", description: "CRM services designed to elevate your customer relationships and drive business growth." },
+  { icon: <FaLaptopCode  />, title: "ERP Development", description: "Strategic ERP development services." },
+  { icon: <FaUsers  />, title: "CRM", description: "CRM services designed to elevate your customer relationships and drive business growth." },
   { icon: <FaTools />, title: "API Integration Services", description: "Top-notch API integration service." },
 ];
 

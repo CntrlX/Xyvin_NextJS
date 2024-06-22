@@ -8,9 +8,9 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 // Import images from local folder
-import Image1 from '/assets/img/carousel_img/image1.jpg';
-import Image2 from '/assets/img/carousel_img/image2.jpg';
-import Image3 from '/assets/img/carousel_img/image3.jpg';
+import Image1 from '@/assets/img/carousel_img/image1.jpg';
+import Image2 from '@/assets/img/carousel_img/image2.jpg';
+import Image3 from '@/assets/img/carousel_img/image3.jpg';
 
 const HeroCarousel: React.FC = () => {
   return (
