@@ -12,7 +12,7 @@ const HeroCarousel: React.FC = () => {
   return (
   <div
       style={{
-        background: '#000',
+        background: '#01112F',
         padding: '50px 0',
         textAlign: 'center',
       }}
@@ -30,7 +30,7 @@ const HeroCarousel: React.FC = () => {
         boxSizing: 'border-box', 
         borderRadius:'200px',
         minWidth:'398px',
-        background:'#3333',
+        background:'#01112F',
         marginTop:'100px',
         marginBottom:'20px',
       }}
@@ -60,8 +60,8 @@ const HeroCarousel: React.FC = () => {
           }}
         >
         <div className="slideContent">
-          <h2>Slide 1 Title</h2>
-          <p>Slide 1 Description</p>
+          <h2>Award 1</h2>
+          <p>The great award of best startup</p>
         </div>
       </SwiperSlide>
       <SwiperSlide className="slide"  style={{
