@@ -4,6 +4,8 @@
   display: flex;
   flex-direction: column-reverse;
   list-style: none;
+  justify-content: center;
+  align-items:center;
   padding: 0;
   margin: 0;
   position: fixed; /* Add this line */

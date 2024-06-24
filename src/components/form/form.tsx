@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 
-
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -61,18 +60,23 @@ const ContactForm: React.FC = () => {
 
       <style jsx>{`
         .outerContainer {
-          background-color: #000;
+          background-color: #01112F;
           padding: 20px;
           display: flex;
           justify-content: center;
+          align-items: center;
+          min-height: 100vh; /* Ensure the outer container takes the full viewport height */
         }
 
         .contactFormContainer {
           background-color: #333;
           color: #fff;
           padding: 50px;
-          max-width: 750px;
+          max-width: 860px;
+          width: 100%;
           border-radius: 20px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          transition: padding 0.3s ease;
         }
 
         .contactForm {
@@ -94,7 +98,7 @@ const ContactForm: React.FC = () => {
         input,
         textarea {
           width: 100%;
-          padding: 2px;
+          padding: 10px;
           border-radius: 0;
           border: none;
           border-bottom: 2px solid #ccc; /* Thin line style */
@@ -105,31 +109,28 @@ const ContactForm: React.FC = () => {
         input:focus,
         textarea:focus {
           outline: none;
-          border-color: #1e3a8a; /* Change border color on focus */
+          border-color: #FEA3AC; /* Change border color on focus */
         }
 
         textarea {
           resize: none; /* Prevent resizing of textarea */
-          min-height: 50px; /* Set a minimum height for textarea */
-        }
-
-        .recaptcha {
-          margin-bottom: 20px;
-          transform: scale(0.85); /* Scale down the reCAPTCHA widget */
-          transform-origin: 0 0; /* Adjust the transform origin */
+          min-height: 40px; /* Set a minimum height for textarea */
         }
 
         .submitButton {
           border: none;
           background-color: transparent;
+          font-size: 1.5rem;
           color: #fff;
           cursor: pointer;
           text-decoration: underline;
           margin-left: -4px; /* Adjust margin to align with form fields */
+          transition: color 0.5s ease, opacity 0.5s ease; /* Add smooth and soft transition */
         }
 
         .submitButton:hover {
-          color: #1e3a8a;
+          color: #8BF7B7;
+          opacity: 0.7; /* Reduce opacity on hover */
         }
 
         p {
@@ -138,6 +139,31 @@ const ContactForm: React.FC = () => {
 
         h2 {
           color: #fff;
+        }
+
+        @media (max-width: 600px) {
+          .contactFormContainer {
+            padding: 20px;
+          }
+
+          input,
+          textarea {
+            padding: 5px;
+          }
+
+          .submitButton {
+            font-size: 1.2rem;
+          }
+        }
+
+        @media (min-width: 1200px) {
+          .contactFormContainer {
+            padding: 70px;
+          }
+
+          .submitButton {
+            font-size: 2rem;
+          }
         }
       `}</style>
     </div>

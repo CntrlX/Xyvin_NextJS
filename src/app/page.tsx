@@ -20,29 +20,13 @@ import HeroHomeSix from "@/components/hero/HeroHomeSix";
 import Service from "@/components/services/service";
 import Achievements from "@/components/achievements/achivement";
 import Form from "@/components/form/form";
-import Accordian from "@/components/accordian/accordian";
+import Accordion from "@/components/accordian/accordian";
 
 
 export const metadata = {
   title: "Xyvin Tech",  
 };
 
-
-const data = [
-  {
-    question: 'What is Next.js?',
-    answer: 'Next.js is a React framework that enables server-side rendering and generating static websites for React-based web applications.'
-  },
-  {
-    question: 'How does Next.js differ from React?',
-    answer: 'Next.js is a framework built on top of React, adding features like server-side rendering and static site generation.'
-  },
-  {
-    question: 'What are the benefits of using Next.js?',
-    answer: 'Some benefits include improved performance, SEO optimization, and easier deployment and scaling of web applications.'
-  },
-  // Add more questions and answers as needed
-];
 
 const index = () => {
   return (
@@ -66,9 +50,9 @@ const index = () => {
         <BlogHomeOne />
         <SubscribeHomeOne />
         <BrandHomeOne style_2={false}  />
-         <Achievements/>
+        {/* <Achievements/> */}
         <Form/>
-        <Accordian data={data}/>
+        <Accordion/>
         <BottomSticky/>
 
         <FooterOne />
