@@ -64,7 +64,7 @@ const styles: { [key: string]: React.CSSProperties } = {
   question: {
     cursor: 'pointer',
     fontWeight: 'bold',
-    color: '#0070f3',
+    color: '#454545',
   },
   answer: {
     marginTop: '10px',

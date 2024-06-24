@@ -1,187 +1,88 @@
-'use client';
+'use client'
 
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import React, { useState, useEffect } from 'react';
 
-const HeroCarousel: React.FC = () => {
+const AchievementComponent: React.FC = () => {
+  const achievements = [
+    { id: 1, title: 'Achievement 1', description: 'Description for Achievement 1', imageUrl: '/assets/img/project_successfull_1.jpg' },
+    { id: 2, title: 'Achievement 2', description: 'Description for Achievement 2', imageUrl: '/assets/img/project_successfull_1.jpg' },
+    { id: 3, title: 'Achievement 3', description: 'Description for Achievement 3', imageUrl: '/assets/img/project_successfull_1.jpg' },
+    { id: 4, title: 'Achievement 4', description: 'Description for Achievement 4', imageUrl: '/assets/img/project_successfull_1.jpg' },
+    { id: 5, title: 'Achievement 5', description: 'Description for Achievement 5', imageUrl: '/assets/img/project_successfull_1.jpg' },
+    { id: 6, title: 'Achievement 6', description: 'Description for Achievement 6', imageUrl: '/assets/img/project_successfull_1.jpg' },
+  ];
+
+  const [visibleIndex, setVisibleIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setVisibleIndex((prevIndex) => (prevIndex + 3) % achievements.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [achievements.length]);
+
   return (
-    <div
-      style={{
-        background: '#01112F',
-        padding: '50px 0',
-        textAlign: 'center',
-      }}
-    >
-      <h2 style={{ color: '#fff', fontSize: '24px' }}>Achievements</h2>
-      <p style={{ color: '#CAC9CA', fontSize: '16px', margin: '10px 0' }}>
-        Celebrating our outstanding accomplishments and prestigious awards.
-      </p>
-
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          minHeight: 'calc(60vh - 300px)',
-          padding: '0 20px',
-          boxSizing: 'border-box',
-          background: '#01112F',
-          marginTop: '20px',
-          borderRadius: '20px',
-          width: '100%',
-          maxWidth: '1200px',
-          margin: '0 auto',
-        }}
-      >
-        <Swiper
-          spaceBetween={30}
-          centeredSlides={true}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-          }}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={false}
-          modules={[Autoplay, Pagination, Navigation]}
-          className="swiperContainer"
-        >
-          <SwiperSlide
-            className="slide"
-            style={{
-              backgroundImage: 'url(/assets/img/award_1.svg)',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              minHeight: '300px',
-              borderRadius: '20px',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              color: '#fff',
-            }}
-          >
-            <div className="slideContent" style={{ textAlign: 'center', padding: '20px' }}>
-              <h2>Award 1</h2>
-              <p>The great award of best startup</p>
+    <div className="achievementWrapper">
+      <h2 className="heading">Achievements</h2>
+      <div className="achievementContainer">
+        {achievements.slice(visibleIndex, visibleIndex + 3).map((achievement) => (
+          <div key={achievement.id} className="achievementCard">
+            <img src={achievement.imageUrl} alt={achievement.title} className="achievementImage" />
+            <div className="achievementDetails">
+              <h3>{achievement.title}</h3>
+              <p>{achievement.description}</p>
             </div>
-          </SwiperSlide>
-          <SwiperSlide
-            className="slide"
-            style={{
-              backgroundImage: 'url(/assets/img/award_2.svg)',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              minHeight: '300px',
-              borderRadius: '20px',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              color: '#fff',
-            }}
-          >
-            <div className="slideContent" style={{ textAlign: 'center', padding: '20px' }}>
-              <h2>Award 2</h2>
-              <p>Slide 2 Description</p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide
-            className="slide"
-            style={{
-              backgroundImage: 'url(/assets/img/award_3.svg)',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              minHeight: '300px',
-              borderRadius: '20px',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              color: '#fff',
-            }}
-          >
-            <div className="slideContent" style={{ textAlign: 'center', padding: '20px' }}>
-              <h2>Award 3</h2>
-              <p>Slide 3 Description</p>
-            </div>
-          </SwiperSlide>
-        </Swiper>
+          </div>
+        ))}
       </div>
-
       <style jsx>{`
-        .swiperContainer {
-          width: 100%;
-          height: 100%;
+        .achievementWrapper {
+          text-align: center;
+          padding: 20px;
+          background-color:#01112F;
+        }
+        .heading {
+          font-size: 2rem;
+          margin-bottom: 20px;
+          color: #fff;
         }
 
-        .slide {
+        .achievementContainer {
           display: flex;
           justify-content: center;
-          align-items: center;
+          gap: 20px;
+          margin-top: 20px;
+          margin-bottom: 40px; 
+          border-radius:20px;
         }
 
-        .slideContent {
-          text-align: center;
+        .achievementCard {
+        display:relative;
+          width: 300px;
+          // border: 1px solid #333;
+          border-radius: 5px;
+          overflow: hidden;
+          background-color: #f9f9f9;
+          transition: opacity 0.5s ease-in-out;
         }
 
-        h2 {
-          font-size: 2em;
-          margin: 10px 0;
+        .achievementImage {
+        display:absolute;
+        top:0;
+        left:50%;
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
         }
 
-        p {
-          font-size: 1em;
-          margin: 10px 0;
-          color: #cac9ca;
-        }
-
-        @media (max-width: 1200px) {
-          .slideContent {
-            padding: 15px;
-          }
-
-          h2 {
-            font-size: 1.8em;
-          }
-
-          p {
-            font-size: 0.9em;
-          }
-        }
-
-        @media (max-width: 768px) {
-          .slideContent {
-            padding: 10px;
-          }
-
-          h2 {
-            font-size: 1.6em;
-          }
-
-          p {
-            font-size: 0.8em;
-          }
-        }
-
-        @media (max-width: 480px) {
-          .slideContent {
-            padding: 5px;
-          }
-
-          h2 {
-            font-size: 1.4em;
-          }
-
-          p {
-            font-size: 0.7em;
-          }
+        .achievementDetails {
+          padding: 10px;
+          border: 2px solid #000;
         }
       `}</style>
     </div>
   );
 };
 
-export default HeroCarousel;
+export default AchievementComponent;

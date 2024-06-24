@@ -60,7 +60,7 @@ const ContactForm: React.FC = () => {
 
       <style jsx>{`
         .outerContainer {
-          background-color: #000;
+          background-color: #01112F;
           padding: 20px;
           display: flex;
           justify-content: center;

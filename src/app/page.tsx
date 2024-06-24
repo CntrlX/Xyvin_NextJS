@@ -50,7 +50,7 @@ const index = () => {
         <BlogHomeOne />
         <SubscribeHomeOne />
         <BrandHomeOne style_2={false}  />
-        <Achievements/>
+        {/* <Achievements/> */}
         <Form/>
         <Accordion/>
         <BottomSticky/>
