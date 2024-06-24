@@ -64,6 +64,8 @@ const ContactForm: React.FC = () => {
           padding: 20px;
           display: flex;
           justify-content: center;
+          align-items: center;
+          min-height: 100vh; /* Ensure the outer container takes the full viewport height */
         }
 
         .contactFormContainer {
@@ -71,7 +73,10 @@ const ContactForm: React.FC = () => {
           color: #fff;
           padding: 50px;
           max-width: 860px;
+          width: 100%;
           border-radius: 20px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          transition: padding 0.3s ease;
         }
 
         .contactForm {
@@ -109,7 +114,7 @@ const ContactForm: React.FC = () => {
 
         textarea {
           resize: none; /* Prevent resizing of textarea */
-          min-height: 50px; /* Set a minimum height for textarea */
+          min-height: 40px; /* Set a minimum height for textarea */
         }
 
         .submitButton {
@@ -148,6 +153,16 @@ const ContactForm: React.FC = () => {
 
           .submitButton {
             font-size: 1.2rem;
+          }
+        }
+
+        @media (min-width: 1200px) {
+          .contactFormContainer {
+            padding: 70px;
+          }
+
+          .submitButton {
+            font-size: 2rem;
           }
         }
       `}</style>

@@ -1,111 +1,75 @@
-'use client'
+'use client';
 
 import { useState } from 'react';
 
-type AccordionItemProps = {
-  question: string;
-  answer: string;
-};
+const Accordion = () => {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-const AccordionItem: React.FC<AccordionItemProps> = ({ question, answer }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleAccordion = () => {
-    setIsOpen(!isOpen);
+  const handleToggle = (index: number) => {
+    setActiveIndex(activeIndex === index ? null : index);
   };
 
-  return (
-    <div className={`accordionItem ${isOpen ? 'open' : ''}`} onClick={toggleAccordion}>
-      <div className="question">
-        {question}
-      </div>
-      <div className={`answer ${isOpen ? 'open' : ''}`}>
-        {answer}
-      </div>
+  const faqs = [
+    { question: "What is your process for starting a new project?", answer: "Our process includes an initial consultation to understand your needs, followed by a proposal, project planning, development, testing, and deployment. We also offer ongoing support and maintenance." },
+    { question: "What makes your IT services different from others?", answer: "Our services stand out due to our commitment to innovation, personalized solutions, and a team of expert engineers who ensure the highest quality in every project." },
+    { question: "Do you work with startups and small businesses?", answer: "Yes, we work with businesses of all sizes, from startups to large enterprises, providing scalable solutions tailored to their specific needs." },
+    { question: "What industries do you specialize in?", answer: "We have experience working with a variety of industries, including healthcare, finance, education, retail, and more." },
+    { question: "How do you stay updated with the latest technology trends?", answer: "We have a top-notch team of experts who are passionate about current trends and technologies. They are continuously learning through regular training, certifications, and active participation in industry forums and tech communities. Our commitment to innovation is driven by our team's dedication to staying ahead in the ever-evolving tech landscape." },
+  ];
 
-      <style jsx>{`
-        .accordionItem {
-          border-bottom: 2px solid #ddd;
-          transition: background-color 0.3s ease, box-shadow 0.3s ease;
-          cursor: pointer;
-          margin-bottom: 10px;
-          padding: 10px;
-          border-radius: 5px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .accordionItem:hover {
-          background-color: #f0f0f0;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-        }
-        .question {
-          padding: 15px;
-          background-color: #f7f7f7;
-          font-weight: bold;
-          border-radius: 5px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .answer {
-          max-height: 0;
-          overflow: hidden;
-          transition: max-height 0.3s ease, padding 0.3s ease;
-          padding: 0 15px;
-          background-color: #fff;
-          border-radius: 0 0 5px 5px;
-        }
-        .answer.open {
-          max-height: 200px; /* Adjust this value based on content length */
-          padding: 15px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-        }
-      `}</style>
+  return (
+    <div style={styles.container}>
+      <h1 style={styles.heading}>FAQ</h1>
+      {faqs.map((faq, index) => (
+        <div key={index} style={styles.card}>
+          <div style={styles.question} onClick={() => handleToggle(index)}>
+            {faq.question}
+          </div>
+          <div
+            style={{
+              ...styles.answer,
+              maxHeight: activeIndex === index ? '200px' : '0',
+              overflow: 'hidden',
+              transition: 'max-height 0.5s ease',
+            }}
+          >
+            {faq.answer}
+          </div>
+        </div>
+      ))}
     </div>
   );
 };
 
-type AccordionProps = {
-  data: { question: string; answer: string }[];
-};
-
-const Accordion: React.FC<AccordionProps> = ({ data }) => {
-  return (
-    <div className="container">
-      <h1 className="heading">FAQ</h1>
-      <div className="accordion">
-        {data.map((item, index) => (
-          <AccordionItem key={index} question={item.question} answer={item.answer} />
-        ))}
-      </div>
-
-      <style jsx>{`
-        .container {
-          text-align: center;
-          padding: 20px;
-        }
-        .heading {
-          font-size: 2.5em;
-          margin-bottom: 20px;
-          padding: 10px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-          display: inline-block;
-          border-radius: 5px;
-          transition:0.5 ;
-        }
-          .heading:hover{
-          box-shadow: 0 4px 8px rgba(0, 0, 0.5, 0.25);
-          transform: scale(1.1)
-
-          }
-        .accordion {
-          border: 1px solid #ddd;
-          border-radius: 5px;
-          width: 100%;
-          max-width: 600px;
-          margin: 0 auto;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-        }
-      `}</style>
-    </div>
-  );
+const styles: { [key: string]: React.CSSProperties } = {
+  container: {
+    maxWidth: '600px',
+    margin: '0 auto',
+    padding: '20px',
+    fontFamily: 'Arial, sans-serif',
+  },
+  heading: {
+    textAlign: 'center',
+    marginBottom: '20px',
+    color: '#333',
+    fontSize:'28px'
+  },
+  card: {
+    border: '1px solid #ddd',
+    borderRadius: '5px',
+    marginBottom: '10px',
+    padding: '10px',
+    boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
+  },
+  question: {
+    cursor: 'pointer',
+    fontWeight: 'bold',
+    color: '#0070f3',
+  },
+  answer: {
+    marginTop: '10px',
+    color: '#555',
+  },
 };
 
 export default Accordion;
